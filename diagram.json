@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 0, "left": 0, "rotate": 90, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -90,
+      "left": -140,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": 40,
+      "left": -140,
+      "rotate": 180,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo3", "top": -90, "left": 140, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 40, "left": 140, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 180, "left": 60, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 180, "left": 90, "attrs": {} }
+  ],
+  "connections": [
+    [ "servo3:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo4:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo2:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo1:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo1:V+", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "servo2:V+", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "servo4:V+", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "servo3:V+", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "servo1:PWM", "nano:A0", "green", [ "h0" ] ],
+    [ "servo2:PWM", "nano:A1", "green", [ "h0" ] ],
+    [ "servo3:PWM", "nano:A2", "green", [ "h0" ] ],
+    [ "servo4:PWM", "nano:A3", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
